@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import "./Title.css";
 
 class Title extends Component{
     render(){
         return(
-            <div className="header">
-           Memory Jamboree
-            </div>
+            <h1 class="h1 text-center">Memory Jamboree</h1>
         )
 
     }

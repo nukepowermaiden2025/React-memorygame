@@ -7,6 +7,19 @@ import Title from "./components/Title";
 import Player from "./components/Player";
 import Wrapper from "./components/Wrapper";
 
+const randomSort=(data)=> {
+  data.sort(function(a, b){return 0.5 - Math.random()});
+}
+
+const generateImg =(data)=> {
+  randomSort();
+  {this.state.data.map(item => (
+    <Player
+      playerName={item.name}
+      playerImg = {item.image}
+    />
+  ))}
+}
 
 
 class App extends Component {
@@ -16,9 +29,8 @@ class App extends Component {
   render(){
     return (
      <Wrapper>
-       <Navbar>
+       <Navbar/>
        <Title/>
-       </Navbar>
         <div className="players">
          {this.state.players.map(player => (
           <Player
