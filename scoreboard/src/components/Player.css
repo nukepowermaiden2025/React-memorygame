@@ -1,4 +1,5 @@
 .img-size{
-    height: 30vh;
-    width:20vw;
+    max-height: 30vh;
+    max-width:25vw;
+    box-sizing: border-box;
 }

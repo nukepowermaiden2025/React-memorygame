@@ -82,5 +82,26 @@
     "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
     "player-score": 0,
     "location": "Under a City Dump"
+  },
+  {
+    "id": 13,
+    "name": "Spider Man",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9fhkJZLft0AvcZlRZ9UiyXR2riA3VSUdqaUDEb1081XuhEXJ",
+    "player-score": 0,
+    "location": "O-Town, California"
+  },
+  {
+    "id": 14,
+    "name": "Storm",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-XNVsCLhrv_LnBPcTytlkkHBFCH1OoQeY76QKpdhthjXdUfYag",
+    "player-score": 0,
+    "location": "Earth"
+  },
+  {
+    "id": 15,
+    "name": "Batman",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx6VJVs6XwArxC339SbubuoOHZFbVtSsMTVZkXYhYARJoTNL_VsQ",
+    "player-score": 0,
+    "location": "Gotham"
   }
 ]
