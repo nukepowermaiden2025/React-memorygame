@@ -4,7 +4,7 @@ import "./Title.css";
 class Title extends Component{
     render(){
         return(
-            <h1 class="h1 text-center">Memory Jamboree</h1>
+            <h1 className="h1 text-center">Memory Jamboree</h1>
         )
 
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 import players from "./players.json";
 import Navbar from "./components/Navbar";
@@ -17,14 +16,13 @@ class App extends Component {
     // score//Todo
   };
 
- randomSort = data => {
-   data.sort(function(a, b){return 0.5 - Math.random()});
-   
-  };
+//  randomSort = () => {
+//    const shuffleArr  = this.state.players.sort(function(a, b){return 0.5 - Math.random()});
+//    this.setState({players:shuffleArr})
+//   };
   
-//  resetGame = (data,score) => {//Need to figure out if this is suppose to have the actual data spelled out or do i use placeholder?
-//     randomSort(data);
-//     {data.map(item => (
+//  resetGame = () => {//Need to figure out if this is suppose to have the actual data spelled out or do i use placeholder?
+//     {this.randomSort().map(item => (
 //       <Player
 //         playerName ={item.name}
 //         playerImg ={item.image}
@@ -33,14 +31,15 @@ class App extends Component {
     
 //   };
   
-//  handleImgClick = event => {
-//     { 
-//       if (!this.state.players.data-isClicked
-//       ? this.setState({[this.state.players.data-isClicked]:true})
-//       : this.resetGame(this.state));//Todo
-//     };
+ handleImgClick = event => {
+    // console.log("You clicked an image")
+    if (![this.state.players.name]===""
+    ? this.setState({[this.state.players.name]:""})
+    : console.log("You already clicked this image")
+  );//Todo
+    
  
-//   };
+  };
   
   render(){
     return (
@@ -50,8 +49,9 @@ class App extends Component {
           <div className="players">
           {this.state.players.map(player => (
             <Player
-              playerName={player.name}
+              playerAlt = {player.name}
               playerImg = {player.image}
+              onClick = {this.handleImgClick}
             />
           ))}
         </div>

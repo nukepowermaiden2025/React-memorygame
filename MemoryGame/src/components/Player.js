@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './Player.css';
 
 
@@ -9,10 +8,10 @@ class Player extends Component {
         return(
    
         <img className="rounded float-left img-thumbnail img-size"
+            alt={this.props.playerAlt}
             src = {this.props.playerImg}
-            onClick = {this.handleImgClick}
-            data-isClicked = {false}
-
+            onClick = {this.props.onClick}
+          
         />
         )
     }
