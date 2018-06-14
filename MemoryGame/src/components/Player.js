@@ -8,8 +8,12 @@ class Player extends Component {
     render(){
         return(
    
-        <img className="rounded float-left img-thumbnail img-size" src={this.props.playerImg}/>
-      
+        <img className="rounded float-left img-thumbnail img-size"
+            src = {this.props.playerImg}
+            onClick = {this.handleImgClick}
+            data-isClicked = {false}
+
+        />
         )
     }
 

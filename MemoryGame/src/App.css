@@ -4,7 +4,19 @@ html, body {
   }
 
 
-.img-size{
-  height: 30vh;
-  width:20vw;
+
+
+@media (min-width:369px){
+  .wrapper{
+      min-height:100vh;
+      overflow-x:hidden;
+      max-width: 100%;
+
+  }
+
+  .shadow{
+      min-height: 300px;
+  }
+  
 }
+

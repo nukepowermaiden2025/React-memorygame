@@ -1,5 +1,6 @@
 .img-size{
-    max-height: 22vh;
-    max-width:20vw;
-    box-sizing: border-box;
-}
+    max-height: 20vh;
+    min-width: 19vw;
+    margin:2px;
+  }
+  
