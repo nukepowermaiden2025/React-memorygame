@@ -31,24 +31,18 @@ class PlayerWrapper extends Component {
 
     let name = event.target.name;
     const alt = event.target.alt
+    console.log("This name =", name);
+    console.log("This alt =", alt);
     
-    if (!name === alt
-    ?  this.setState({name:alt})
+    name !== alt
+    ?  this.setState({name:alt})//Need to set state.name to state.alt
     : console.log(name)
-  );//Todo
+  //Todo
 
-//   handleInputChange = event => {
-//     // Pull the name and value properties off of the event.target (the element which triggered the event)
-//     const { name, value } = event.target;
-
-//     // Set the state for the appropriate input field
-//     this.setState({
-//       [name]: value
-//     });
-//   };
  
   };
     render(){
+      console.log(this.state.name);
         return(
         <div className="players">
             {this.state.players.map(player => (
