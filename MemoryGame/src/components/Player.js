@@ -1,20 +1,19 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import './Player.css';
 
 
-class Player extends Component {
-    render(){
-        return(
+const Player = props=> {
    
-        <img className="rounded float-left img-thumbnail img-size" 
-            alt={this.props.playerAlt}
-            src = {this.props.playerImg}
-            onClick = {this.props.onClick}
-            name ={this.props.name}
-        />
-        )
-    }
+    return(
+    <img className="rounded float-left img-thumbnail img-size" 
+        id={props.id}
+        alt={props.playerAlt}
+        src = {props.playerImg}
+        onClick={() => props.handleImgClick(props.id)}
+        
+    />
+    )   
 
 }
 
