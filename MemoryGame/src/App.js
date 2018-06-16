@@ -17,24 +17,46 @@ class App extends Component {
     clickArr:[],
     score:0
   };
+
+  randomSort = () => {
+    let shuffleArr = this.state.players.sort(function(a, b){return 0.5 - Math.random()});
+    this.setState({players:shuffleArr})
+  };
   
   incrementScore = () => {
-    newScore = this.state.score + 1;
-
+    const newScore = this.state.score + 1;
+    
   }
- 
- 
-   handleImgClick = id => {
-     //Get the arr current state
-     //pass the id 
-     const newClicks = this.state.clickArr;
-     console.log(newClicks);
 
-     if(newClicks.includes(id)){
-      console.log("You loose!")
-     }else{
-      newClicks.push(id);
-     }
+  resetGame = () => {
+    //Reset the state to the basics states
+  }
+
+  handleGoodGuess = shuffleArr => {
+    //randomly shuffle the players
+    //Increment the score
+  }
+  handleBadGuess = shuffleArr => {
+    //randomly shuffle the players
+    //reset Score
+  }
+
+  handleImgClick = id => {
+  //Get the arr current state
+  //pass the id 
+  //If the player is not included in in the array
+    //Call handleGoodGuess(players)
+  //If the player is included in the array 
+    //Call handleBadGuess
+  const newClicks = this.state.clickArr;
+  console.log(newClicks);
+
+  if(newClicks.includes(id)){
+  console.log("You loose!");
+  this.randomSort();
+  }else{
+  newClicks.push(id);
+  }
        
         
  
