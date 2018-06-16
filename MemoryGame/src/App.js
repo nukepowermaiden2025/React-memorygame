@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
@@ -18,7 +17,9 @@ class App extends Component {
     clickArr:[],
     score:0
   };
-  incrementScore = {
+  
+  incrementScore = () => {
+    newScore = this.state.score + 1;
 
   }
  
@@ -28,9 +29,14 @@ class App extends Component {
      //pass the id 
      const newClicks = this.state.clickArr;
      console.log(newClicks);
-     newClicks.includes(id)
-       ? console.log("You loose!")
-       : newClicks.push(id);
+
+     if(newClicks.includes(id)){
+      console.log("You loose!")
+     }else{
+      newClicks.push(id);
+     }
+       
+        
  
    };
   
