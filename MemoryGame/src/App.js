@@ -8,14 +8,12 @@ import Wrapper from "./components/Wrapper";
 import Player from './components/Player';
 import players from "./players.json";
 
-
-
-
 class App extends Component {
   state ={
     players,
     clickArr:[],
-    score:0
+    score:0,
+    highscore:0
   };
 
   randomSort = () => {
@@ -25,11 +23,28 @@ class App extends Component {
   
   incrementScore = () => {
     const newScore = this.state.score + 1;
+    this.setState({score:newScore});
     
   }
 
+  incrementHighScore = () => {
+    const newHighScore = this.state.highscore + 1;
+    this.setState({highscore:newHighScore});
+    //Add if else to increment HighScore
+      //if this.state.score < this.state.highscore
+        //Ignore
+      //Else increment Score
+  };
+
   resetGame = () => {
-    //Reset the state to the basics states
+    this.randomSort();
+    this.setState({
+        players,
+        clickArr:[],
+        score:0,
+        // highscore:0
+      });
+   
   }
 
   handleGoodGuess = shuffleArr => {
@@ -53,10 +68,13 @@ class App extends Component {
    
     if(newClicks.includes(id)){
       console.log("You loose!");
-      this.randomSort();
+      this.resetGame();
+      
       }else{
       newClicks.push(id);
       this.randomSort();
+      this.incrementScore();
+      this.incrementHighScore();
       console.log(`You just added ${id} with a name of ${alt}`)
     }
   };
@@ -67,6 +85,7 @@ class App extends Component {
        <Navbar/>
         <Title
         score = {this.state.score}
+        highScore={this.state.highscore}
         />
         <div className="row">
           <div className="col-lg-12 col-m-12 col-s-12">
@@ -81,7 +100,6 @@ class App extends Component {
                   name = {player.location}
                 />
               ))}
-        
           </div>
         </div>
       </div>
