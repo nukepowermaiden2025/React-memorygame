@@ -10,7 +10,7 @@ const Player = props=> {
         id={props.id}
         alt={props.playerAlt}
         src = {props.playerImg}
-        onClick={() => props.handleImgClick(props.id)}
+        onClick={() => props.handleImgClick(props.id,props.playerAlt)}
         
     />
     )   

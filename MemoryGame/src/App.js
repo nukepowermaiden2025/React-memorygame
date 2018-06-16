@@ -41,7 +41,7 @@ class App extends Component {
     //reset Score
   }
 
-  handleImgClick = id => {
+  handleImgClick = (id,alt) => {
   //Get the arr current state
   //pass the id 
   //If the player is not included in in the array
@@ -50,17 +50,16 @@ class App extends Component {
     //Call handleBadGuess
   const newClicks = this.state.clickArr;
   console.log(newClicks);
-
-  if(newClicks.includes(id)){
-  console.log("You loose!");
-  this.randomSort();
-  }else{
-  newClicks.push(id);
-  }
-       
-        
- 
-   };
+   
+    if(newClicks.includes(id)){
+      console.log("You loose!");
+      this.randomSort();
+      }else{
+      newClicks.push(id);
+      this.randomSort();
+      console.log(`You just added ${id} with a name of ${alt}`)
+    }
+  };
   
   render(){
     return (
