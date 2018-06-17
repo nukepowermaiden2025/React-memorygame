@@ -29,7 +29,16 @@ class App extends Component {
 
   incrementHighScore = () => {
     const newHighScore = this.state.highscore + 1;
-    this.setState({highscore:newHighScore});
+
+    if(this.state.highscore > this.state.score){
+      console.log("Your last scoere was higher")
+     
+    }else{
+      this.setState({highscore:newHighScore});
+      console.log("This is your new high score")
+    }
+    
+    
     //Add if else to increment HighScore
       //if this.state.score < this.state.highscore
         //Ignore

@@ -4,7 +4,7 @@ import "./Title.css";
 const Title = props =>{
 
     return(
-        <div className="row">
+    <div className="row">
         <div className="col-md-4">
             <p className="text-center">Click to play, but don't click on the same picture twice.</p>
         </div>
